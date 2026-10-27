@@ -1,0 +1,6 @@
+{
+  "name": "The Dead Walk You Through Their World",
+  "description": "An atmospheric interactive horror mystery investigation where you explore abandoned locations, examine evidence, and uncover forgotten stories with an AI guide.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

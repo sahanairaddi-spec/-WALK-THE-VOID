@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #070709;
+    --bg-surface: #0f1015;
+    --bg-card: #15161e;
+    --border-decay: #262733;
+    --accent-crimson: #8b1515;
+    --accent-blood: #c42727;
+    --accent-amber: #c89547;
+    --accent-sepia: #d9bf92;
+    --text-ghost: #e2e4ea;
+    --text-muted: #8b8e9b;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-ghost);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow-x: hidden;
+    user-select: text;
+  }
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-decorative {
+  font-family: 'Cinzel Decorative', serif;
+}
+
+.font-typewriter {
+  font-family: 'Courier Prime', 'Special Elite', monospace;
+}
+
+.font-handwriting {
+  font-family: 'Special Elite', cursive, serif;
+}
+
+/* Atmospheric Vignette & Scanline / Noise */
+.horror-vignette {
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.9), inset 0 0 160px rgba(0, 0, 0, 0.95);
+}
+
+.vintage-paper {
+  background-color: #dfd4bf;
+  color: #1a1612;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), inset 0 0 40px rgba(110, 80, 45, 0.25);
+}
+
+.vintage-photo {
+  filter: sepia(0.65) contrast(1.15) brightness(0.9) grayscale(0.2);
+}
+
+.vintage-photo-hover:hover {
+  filter: sepia(0.4) contrast(1.2) brightness(0.95) grayscale(0.1);
+  transition: filter 0.5s ease;
+}
+
+.uv-mode {
+  filter: hue-rotate(240deg) invert(0.9) contrast(1.8) saturate(2);
+}
+
+@keyframes flicker {
+  0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+    opacity: 1;
+  }
+  20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+    opacity: 0.35;
+  }
+}
+
+.animate-flicker {
+  animation: flicker 6s infinite;
+}
+
+@keyframes slowPulse {
+  0%, 100% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.03);
+  }
+}
+
+.animate-slow-pulse {
+  animation: slowPulse 4s ease-in-out infinite;
+}
+
+@keyframes driftFog {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.25;
+  }
+  50% {
+    transform: translate(-30px, -15px) scale(1.1);
+    opacity: 0.45;
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.25;
+  }
+}
+
+.animate-fog {
+  animation: driftFog 18s ease-in-out infinite;
+}
+
+/* Custom moody scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090a0d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2b2e3b;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8b1515;
+}
